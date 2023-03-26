@@ -60,8 +60,7 @@ def get_message(message):
         "top_p": top_p,
         "n": num_responses,
         "frequency_penalty": frequency_penalty,
-        "presence_penalty": presence_penalty,
-        "conversation_id": convo_id
+        "presence_penalty": presence_penalty
     }
 
     # Set the headers for the request (including the API key)
@@ -75,6 +74,9 @@ def get_message(message):
 
     gptmsg = response.json()
     print(gptmsg)
+    gptext = gptmsg['choices'][0]['message']['content']
+    print(gptext)
+    bot.send_message(message.chat.id, gptext)
 
 
 
