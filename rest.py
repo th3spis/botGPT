@@ -45,7 +45,7 @@ def get_message(message):
 
     #bot.reply_to(message, "ok")
     # Print the message text
-    print("[%s]: %s" % (message.username, ))
+    print("[%s]: %s" % (message.from_user.username, message.text))
 
     # Set the prompt for ChatGPT to complete
     prompt = message.text
