@@ -1,6 +1,5 @@
 #! /usr/bin/env python3
 
-
 import telebot
 import openai
 
@@ -54,7 +53,7 @@ def get_message(message):
         }) 
 
     completion = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
+        model=model,
         messages = messages)
     
     response = completion['choices'][0]['message']['content']
