@@ -16,7 +16,7 @@ openai.api_key = ""
 
 # Set the name of the GPT model to use for generating the response
 model = "gpt-3.5-turbo"
-model = "davinci"
+#model = "davinci"
 
 # Set the number of responses to generate
 num_responses = 1
